@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Previsão do Tempo</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <form id="search-form" class="search-bar" autocomplete="off">
+      <input type="text" id="city-input" placeholder="Buscar cidade" required>
+      <button type="submit" title="Buscar">🔍</button>
+      <button type="button" id="locate-btn" title="Usar minha localização">📍</button>
+    </form>
+
+    <main id="content">
+      <p id="status" class="status">Busque uma cidade para começar.</p>
+
+      <section id="hero" class="hero hidden">
+        <p class="hero-tag" id="hero-tag"></p>
+        <h1 id="current-city"></h1>
+        <p class="hero-temp" id="current-temp"></p>
+        <p class="hero-desc" id="current-desc"></p>
+        <p class="hero-minmax" id="hero-minmax"></p>
+      </section>
+
+      <section id="hourly-card" class="card hidden">
+        <p id="summary-text" class="summary-text"></p>
+        <hr>
+        <div id="hourly-list" class="hourly-list"></div>
+      </section>
+
+      <section id="forecast-card" class="card hidden">
+        <p class="daily-header">📅 PREVISÃO PARA 4 DIAS</p>
+        <div id="forecast-list" class="daily-list"></div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Dados por <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a></p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
